@@ -1,0 +1,94 @@
+DPLC_e670:
+DPLC_e670_0: 	dc.w DPLC_e670_3E-DPLC_e670
+DPLC_e670_2: 	dc.w DPLC_e670_3F-DPLC_e670
+DPLC_e670_4: 	dc.w DPLC_e670_42-DPLC_e670
+DPLC_e670_6: 	dc.w DPLC_e670_45-DPLC_e670
+DPLC_e670_8: 	dc.w DPLC_e670_48-DPLC_e670
+DPLC_e670_A: 	dc.w DPLC_e670_4B-DPLC_e670
+DPLC_e670_C: 	dc.w DPLC_e670_4E-DPLC_e670
+DPLC_e670_E: 	dc.w DPLC_e670_51-DPLC_e670
+DPLC_e670_10: 	dc.w DPLC_e670_54-DPLC_e670
+DPLC_e670_12: 	dc.w DPLC_e670_57-DPLC_e670
+DPLC_e670_14: 	dc.w DPLC_e670_5A-DPLC_e670
+DPLC_e670_16: 	dc.w DPLC_e670_5D-DPLC_e670
+DPLC_e670_18: 	dc.w DPLC_e670_60-DPLC_e670
+DPLC_e670_1A: 	dc.w DPLC_e670_63-DPLC_e670
+DPLC_e670_1C: 	dc.w DPLC_e670_66-DPLC_e670
+DPLC_e670_1E: 	dc.w DPLC_e670_69-DPLC_e670
+DPLC_e670_20: 	dc.w DPLC_e670_6C-DPLC_e670
+DPLC_e670_22: 	dc.w DPLC_e670_6F-DPLC_e670
+DPLC_e670_24: 	dc.w DPLC_e670_72-DPLC_e670
+DPLC_e670_26: 	dc.w DPLC_e670_75-DPLC_e670
+DPLC_e670_28: 	dc.w DPLC_e670_78-DPLC_e670
+DPLC_e670_2A: 	dc.w DPLC_e670_7B-DPLC_e670
+DPLC_e670_2C: 	dc.w DPLC_e670_7E-DPLC_e670
+DPLC_e670_2E: 	dc.w DPLC_e670_81-DPLC_e670
+DPLC_e670_30: 	dc.w DPLC_e670_84-DPLC_e670
+DPLC_e670_32: 	dc.w DPLC_e670_87-DPLC_e670
+DPLC_e670_34: 	dc.w DPLC_e670_8A-DPLC_e670
+DPLC_e670_36: 	dc.w DPLC_e670_8D-DPLC_e670
+DPLC_e670_38: 	dc.w DPLC_e670_90-DPLC_e670
+DPLC_e670_3A: 	dc.w DPLC_e670_93-DPLC_e670
+DPLC_e670_3C: 	dc.w DPLC_e670_96-DPLC_e670
+DPLC_e670_3E: 	dc.b $0
+DPLC_e670_3F: 	dc.b $1
+	dc.b $90, $0
+DPLC_e670_42: 	dc.b $1
+	dc.b $B0, $A
+DPLC_e670_45: 	dc.b $1
+	dc.b $D0, $16
+DPLC_e670_48: 	dc.b $1
+	dc.b $90, $24
+DPLC_e670_4B: 	dc.b $1
+	dc.b $B0, $2E
+DPLC_e670_4E: 	dc.b $1
+	dc.b $B0, $A
+DPLC_e670_51: 	dc.b $1
+	dc.b $D0, $16
+DPLC_e670_54: 	dc.b $1
+	dc.b $90, $24
+DPLC_e670_57: 	dc.b $1
+	dc.b $B0, $2E
+DPLC_e670_5A: 	dc.b $1
+	dc.b $F0, $3A
+DPLC_e670_5D: 	dc.b $1
+	dc.b $F0, $4A
+DPLC_e670_60: 	dc.b $1
+	dc.b $D0, $5A
+DPLC_e670_63: 	dc.b $1
+	dc.b $D0, $68
+DPLC_e670_66: 	dc.b $1
+	dc.b $D0, $76
+DPLC_e670_69: 	dc.b $1
+	dc.b $F0, $84
+DPLC_e670_6C: 	dc.b $1
+	dc.b $C0, $94
+DPLC_e670_6F: 	dc.b $1
+	dc.b $B0, $A1
+DPLC_e670_72: 	dc.b $1
+	dc.b $C0, $AD
+DPLC_e670_75: 	dc.b $1
+	dc.b $90, $BA
+DPLC_e670_78: 	dc.b $1
+	dc.b $D0, $C4
+DPLC_e670_7B: 	dc.b $1
+	dc.b $B0, $D2
+DPLC_e670_7E: 	dc.b $1
+	dc.b $B0, $DE
+DPLC_e670_81: 	dc.b $1
+	dc.b $D0, $EA
+DPLC_e670_84: 	dc.b $1
+	dc.b $D0, $C4
+DPLC_e670_87: 	dc.b $1
+	dc.b $B0, $D2
+DPLC_e670_8A: 	dc.b $1
+	dc.b $B0, $DE
+DPLC_e670_8D: 	dc.b $1
+	dc.b $D0, $EA
+DPLC_e670_90: 	dc.b $1
+	dc.b $F0, $F8
+DPLC_e670_93: 	dc.b $1
+	dc.b $F1, $8
+DPLC_e670_96: 	dc.b $1
+	dc.b $F1, $18
+	even
