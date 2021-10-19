@@ -1,0 +1,351 @@
+Mono runtime detected.
+Operating system: Unix 5.4.0.88
+Opening INI file "/home/bunnidev/Documents/SonicRPG/SonLVL/SonLVL.ini"...
+Game type is S1.
+Loading Green Hill Zone Act 1...
+Loading 8x8 tiles from file "../artnem/8x8ghz1.bin", using compression Nemesis...
+Loading palette file "../pallet/sonic.bin"...
+Source: 0 Destination: 0 Length: 16
+Loading 16x16 blocks from file "../map16/ghz.bin", using compression Enigma...
+Loading 256x256 chunks from file "../map256/ghz.bin", using compression Kosinski...
+Loading palette file "../pallet/ghz.bin"...
+Source: 0 Destination: 16 Length: 48
+Loading FG layout from file "../levels/ghz1.bin", using compression Uncompressed...
+Loading BG layout from file "../levels/ghzbg.bin", using compression Uncompressed...
+Loading 8x8 tiles from file "../artnem/8x8ghz2.bin", using compression Nemesis...
+Loading FG layout from file "../levels/ghz2.bin", using compression Uncompressed...
+Loading FG layout from file "../levels/ghz3.bin", using compression Uncompressed...
+Loading FG layout from file "../levels/ending.bin", using compression Uncompressed...
+Loading object definition file "obj.ini".
+Loading object definition file "objGHZ.ini".
+Loading ObjectDefinition type S1ObjectDefinitions.Common.Ring from "Common/Ring.cs"...
+Loading ObjectDefinition type S1ObjectDefinitions.Common.InvisibleBlock from "Common/InvisibleBlock.cs"...
+Compiling code file...
+Compiling code file...
+Loading ObjectDefinition type S1ObjectDefinitions.GHZ.Bridge from "GHZ/Bridge.cs"...
+Compiling code file...
+Loading ObjectDefinition type S1ObjectDefinitions.GHZ.SwingingPlatform from "GHZ/SwingingPlatform.cs"...
+Compiling code file...
+Loading ObjectDefinition type S1ObjectDefinitions.GHZ.SpikedPole from "GHZ/SpikedPole.cs"...
+Compiling code file...
+Compile succeeded.
+Compile succeeded.
+Compile succeeded.
+Compile succeeded.
+Compile succeeded.
+System.AggregateException: One or more errors occurred. (Could not find file "/home/bunnidev/Documents/SonicRPG/_maps/Obj18ghz.asm") ---> System.IO.FileNotFoundException: Could not find file "/home/bunnidev/Documents/SonicRPG/_maps/Obj18ghz.asm"
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) [0x001ef] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions)
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, System.Boolean detectEncodingFromByteOrderMarks, System.Int32 bufferSize) [0x00061] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamReader..ctor(string,System.Text.Encoding)
+  at System.IO.File.InternalReadAllLines (System.String path, System.Text.Encoding encoding) [0x00006] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.IO.File.ReadAllLines (System.String path) [0x00032] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at SonicRetro.SonLVL.API.LevelData.GetASMLabels (System.String file, System.Int32 sti, SonicRetro.SonLVL.API.EngineVersion version) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData.ASMToBin (System.String file, System.Int32 sti, SonicRetro.SonLVL.API.EngineVersion version, System.Collections.Generic.Dictionary`2[System.String,System.Int32]& labels) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData.ASMToBin (System.String file, SonicRetro.SonLVL.API.EngineVersion version, System.Collections.Generic.Dictionary`2[System.String,System.Int32]& labels) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData.ASMToBin (System.String file, SonicRetro.SonLVL.API.EngineVersion version) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.ObjectHelper.MapASMToBmp (System.Byte[] artfile, System.String mapfileloc, System.Int32 frame, System.Int32 startpal, System.Boolean priority, SonicRetro.SonLVL.API.EngineVersion version) [0x00010] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.XMLObjectDefinition.Init (SonicRetro.SonLVL.API.ObjectData data) [0x00224] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData+<>c__DisplayClass102_0.<InitObjectDefinitions>b__0 (System.Collections.Generic.KeyValuePair`2[TKey,TValue] group) [0x0036c] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at System.Threading.Tasks.Parallel+<PartitionerForEachWorker>c__AnonStorey6`2[TSource,TLocal].<>m__1 (System.Collections.IEnumerator& partitionState, System.Int32 timeout, System.Boolean& replicationDelegateYieldedBeforeCompletion) [0x0013f] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+--- End of stack trace from previous location where exception was thrown ---
+
+  at System.Threading.Tasks.Parallel+<PartitionerForEachWorker>c__AnonStorey6`2[TSource,TLocal].<>m__1 (System.Collections.IEnumerator& partitionState, System.Int32 timeout, System.Boolean& replicationDelegateYieldedBeforeCompletion) [0x002f6] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.TaskReplicator+Replica`1[TState].ExecuteAction (System.Boolean& yieldedBeforeCompletion) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.TaskReplicator+Replica.Execute () [0x00029] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+   --- End of inner exception stack trace ---
+  at System.Threading.Tasks.TaskReplicator.Run[TState] (System.Threading.Tasks.TaskReplicator+ReplicatableUserAction`1[TState] action, System.Threading.Tasks.ParallelOptions options, System.Boolean stopOnFirstFailure) [0x0006a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.Parallel.PartitionerForEachWorker[TSource,TLocal] (System.Collections.Concurrent.Partitioner`1[TSource] source, System.Threading.Tasks.ParallelOptions parallelOptions, System.Action`1[T] simpleBody, System.Action`2[T1,T2] bodyWithState, System.Action`3[T1,T2,T3] bodyWithStateAndIndex, System.Func`4[T1,T2,T3,TResult] bodyWithStateAndLocal, System.Func`5[T1,T2,T3,T4,TResult] bodyWithEverything, System.Func`1[TResult] localInit, System.Action`1[T] localFinally) [0x001a9] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+--- End of stack trace from previous location where exception was thrown ---
+
+  at System.Threading.Tasks.Parallel.ThrowSingleCancellationExceptionOrOtherException (System.Collections.ICollection exceptions, System.Threading.CancellationToken cancelToken, System.Exception otherException) [0x00010] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.Parallel.PartitionerForEachWorker[TSource,TLocal] (System.Collections.Concurrent.Partitioner`1[TSource] source, System.Threading.Tasks.ParallelOptions parallelOptions, System.Action`1[T] simpleBody, System.Action`2[T1,T2] bodyWithState, System.Action`3[T1,T2,T3] bodyWithStateAndIndex, System.Func`4[T1,T2,T3,TResult] bodyWithStateAndLocal, System.Func`5[T1,T2,T3,T4,TResult] bodyWithEverything, System.Func`1[TResult] localInit, System.Action`1[T] localFinally) [0x00212] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.Parallel.ForEachWorker[TSource,TLocal] (System.Collections.Generic.IEnumerable`1[T] source, System.Threading.Tasks.ParallelOptions parallelOptions, System.Action`1[T] body, System.Action`2[T1,T2] bodyWithState, System.Action`3[T1,T2,T3] bodyWithStateAndIndex, System.Func`4[T1,T2,T3,TResult] bodyWithStateAndLocal, System.Func`5[T1,T2,T3,T4,TResult] bodyWithEverything, System.Func`1[TResult] localInit, System.Action`1[T] localFinally) [0x00056] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.Parallel.ForEach[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Action`1[T] body) [0x00022] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at SonicRetro.SonLVL.API.LevelData.InitObjectDefinitions () [0x00011] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData.LoadLevel (System.String levelname, System.Boolean loadGraphics) [0x009ad] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.GUI.MainForm.backgroundLevelLoader_DoWork (System.Object sender, System.ComponentModel.DoWorkEventArgs e) [0x00023] in <e586bf449a94471986cc3538caab2ba5>:0 
+---> (Inner Exception #0) System.IO.FileNotFoundException: Could not find file "/home/bunnidev/Documents/SonicRPG/_maps/Obj18ghz.asm"
+File name: '/home/bunnidev/Documents/SonicRPG/_maps/Obj18ghz.asm'
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) [0x001ef] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions)
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, System.Boolean detectEncodingFromByteOrderMarks, System.Int32 bufferSize) [0x00061] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamReader..ctor(string,System.Text.Encoding)
+  at System.IO.File.InternalReadAllLines (System.String path, System.Text.Encoding encoding) [0x00006] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.IO.File.ReadAllLines (System.String path) [0x00032] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at SonicRetro.SonLVL.API.LevelData.GetASMLabels (System.String file, System.Int32 sti, SonicRetro.SonLVL.API.EngineVersion version) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData.ASMToBin (System.String file, System.Int32 sti, SonicRetro.SonLVL.API.EngineVersion version, System.Collections.Generic.Dictionary`2[System.String,System.Int32]& labels) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData.ASMToBin (System.String file, SonicRetro.SonLVL.API.EngineVersion version, System.Collections.Generic.Dictionary`2[System.String,System.Int32]& labels) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData.ASMToBin (System.String file, SonicRetro.SonLVL.API.EngineVersion version) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.ObjectHelper.MapASMToBmp (System.Byte[] artfile, System.String mapfileloc, System.Int32 frame, System.Int32 startpal, System.Boolean priority, SonicRetro.SonLVL.API.EngineVersion version) [0x00010] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.XMLObjectDefinition.Init (SonicRetro.SonLVL.API.ObjectData data) [0x00224] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData+<>c__DisplayClass102_0.<InitObjectDefinitions>b__0 (System.Collections.Generic.KeyValuePair`2[TKey,TValue] group) [0x0036c] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at System.Threading.Tasks.Parallel+<PartitionerForEachWorker>c__AnonStorey6`2[TSource,TLocal].<>m__1 (System.Collections.IEnumerator& partitionState, System.Int32 timeout, System.Boolean& replicationDelegateYieldedBeforeCompletion) [0x0013f] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+--- End of stack trace from previous location where exception was thrown ---
+
+  at System.Threading.Tasks.Parallel+<PartitionerForEachWorker>c__AnonStorey6`2[TSource,TLocal].<>m__1 (System.Collections.IEnumerator& partitionState, System.Int32 timeout, System.Boolean& replicationDelegateYieldedBeforeCompletion) [0x002f6] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.TaskReplicator+Replica`1[TState].ExecuteAction (System.Boolean& yieldedBeforeCompletion) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.TaskReplicator+Replica.Execute () [0x00029] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 <---
+
+Opening INI file "/home/bunnidev/Documents/SonicRPG/SonLVL/SonLVL.ini"...
+Game type is S1.
+Loading Green Hill Zone Act 1...
+Loading 8x8 tiles from file "../artnem/8x8ghz1.bin", using compression Nemesis...
+Loading 16x16 blocks from file "../map16/ghz.bin", using compression Enigma...
+Loading palette file "../pallet/sonic.bin"...
+Source: 0 Destination: 0 Length: 16
+Loading 256x256 chunks from file "../map256/ghz.bin", using compression Kosinski...
+Loading palette file "../pallet/ghz.bin"...
+Source: 0 Destination: 16 Length: 48
+Loading FG layout from file "../levels/ghz1.bin", using compression Uncompressed...
+Loading BG layout from file "../levels/ghzbg.bin", using compression Uncompressed...
+Loading FG layout from file "../levels/ghz2.bin", using compression Uncompressed...
+Loading FG layout from file "../levels/ghz3.bin", using compression Uncompressed...
+Loading 8x8 tiles from file "../artnem/8x8ghz2.bin", using compression Nemesis...
+Loading FG layout from file "../levels/ending.bin", using compression Uncompressed...
+Loading object definition file "obj.ini".
+Loading object definition file "objGHZ.ini".
+Loading ObjectDefinition type S1ObjectDefinitions.Common.Ring from "Common/Ring.cs"...
+Loading type from cached assembly "dllcache/S1ObjectDefinitions.Common.Ring.dll"...
+Loading ObjectDefinition type S1ObjectDefinitions.GHZ.Bridge from "GHZ/Bridge.cs"...
+Loading type from cached assembly "dllcache/S1ObjectDefinitions.GHZ.Bridge.dll"...
+Loading ObjectDefinition type S1ObjectDefinitions.Common.InvisibleBlock from "Common/InvisibleBlock.cs"...
+Loading ObjectDefinition type S1ObjectDefinitions.GHZ.SwingingPlatform from "GHZ/SwingingPlatform.cs"...
+Loading ObjectDefinition type S1ObjectDefinitions.GHZ.SpikedPole from "GHZ/SpikedPole.cs"...
+Loading type from cached assembly "dllcache/S1ObjectDefinitions.Common.InvisibleBlock.dll"...
+Loading type from cached assembly "dllcache/S1ObjectDefinitions.GHZ.SwingingPlatform.dll"...
+Loading type from cached assembly "dllcache/S1ObjectDefinitions.GHZ.SpikedPole.dll"...
+System.AggregateException: One or more errors occurred. (Could not find file "/home/bunnidev/Documents/SonicRPG/_maps/Obj18ghz.asm") ---> System.IO.FileNotFoundException: Could not find file "/home/bunnidev/Documents/SonicRPG/_maps/Obj18ghz.asm"
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) [0x001ef] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions)
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, System.Boolean detectEncodingFromByteOrderMarks, System.Int32 bufferSize) [0x00061] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamReader..ctor(string,System.Text.Encoding)
+  at System.IO.File.InternalReadAllLines (System.String path, System.Text.Encoding encoding) [0x00006] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.IO.File.ReadAllLines (System.String path) [0x00032] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at SonicRetro.SonLVL.API.LevelData.GetASMLabels (System.String file, System.Int32 sti, SonicRetro.SonLVL.API.EngineVersion version) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData.ASMToBin (System.String file, System.Int32 sti, SonicRetro.SonLVL.API.EngineVersion version, System.Collections.Generic.Dictionary`2[System.String,System.Int32]& labels) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData.ASMToBin (System.String file, SonicRetro.SonLVL.API.EngineVersion version, System.Collections.Generic.Dictionary`2[System.String,System.Int32]& labels) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData.ASMToBin (System.String file, SonicRetro.SonLVL.API.EngineVersion version) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.ObjectHelper.MapASMToBmp (System.Byte[] artfile, System.String mapfileloc, System.Int32 frame, System.Int32 startpal, System.Boolean priority, SonicRetro.SonLVL.API.EngineVersion version) [0x00010] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.XMLObjectDefinition.Init (SonicRetro.SonLVL.API.ObjectData data) [0x00224] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData+<>c__DisplayClass102_0.<InitObjectDefinitions>b__0 (System.Collections.Generic.KeyValuePair`2[TKey,TValue] group) [0x0036c] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at System.Threading.Tasks.Parallel+<PartitionerForEachWorker>c__AnonStorey6`2[TSource,TLocal].<>m__1 (System.Collections.IEnumerator& partitionState, System.Int32 timeout, System.Boolean& replicationDelegateYieldedBeforeCompletion) [0x0013f] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+--- End of stack trace from previous location where exception was thrown ---
+
+  at System.Threading.Tasks.Parallel+<PartitionerForEachWorker>c__AnonStorey6`2[TSource,TLocal].<>m__1 (System.Collections.IEnumerator& partitionState, System.Int32 timeout, System.Boolean& replicationDelegateYieldedBeforeCompletion) [0x002f6] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.TaskReplicator+Replica`1[TState].ExecuteAction (System.Boolean& yieldedBeforeCompletion) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.TaskReplicator+Replica.Execute () [0x00029] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+   --- End of inner exception stack trace ---
+  at System.Threading.Tasks.TaskReplicator.Run[TState] (System.Threading.Tasks.TaskReplicator+ReplicatableUserAction`1[TState] action, System.Threading.Tasks.ParallelOptions options, System.Boolean stopOnFirstFailure) [0x0006a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.Parallel.PartitionerForEachWorker[TSource,TLocal] (System.Collections.Concurrent.Partitioner`1[TSource] source, System.Threading.Tasks.ParallelOptions parallelOptions, System.Action`1[T] simpleBody, System.Action`2[T1,T2] bodyWithState, System.Action`3[T1,T2,T3] bodyWithStateAndIndex, System.Func`4[T1,T2,T3,TResult] bodyWithStateAndLocal, System.Func`5[T1,T2,T3,T4,TResult] bodyWithEverything, System.Func`1[TResult] localInit, System.Action`1[T] localFinally) [0x001a9] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+--- End of stack trace from previous location where exception was thrown ---
+
+  at System.Threading.Tasks.Parallel.ThrowSingleCancellationExceptionOrOtherException (System.Collections.ICollection exceptions, System.Threading.CancellationToken cancelToken, System.Exception otherException) [0x00010] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.Parallel.PartitionerForEachWorker[TSource,TLocal] (System.Collections.Concurrent.Partitioner`1[TSource] source, System.Threading.Tasks.ParallelOptions parallelOptions, System.Action`1[T] simpleBody, System.Action`2[T1,T2] bodyWithState, System.Action`3[T1,T2,T3] bodyWithStateAndIndex, System.Func`4[T1,T2,T3,TResult] bodyWithStateAndLocal, System.Func`5[T1,T2,T3,T4,TResult] bodyWithEverything, System.Func`1[TResult] localInit, System.Action`1[T] localFinally) [0x00212] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.Parallel.ForEachWorker[TSource,TLocal] (System.Collections.Generic.IEnumerable`1[T] source, System.Threading.Tasks.ParallelOptions parallelOptions, System.Action`1[T] body, System.Action`2[T1,T2] bodyWithState, System.Action`3[T1,T2,T3] bodyWithStateAndIndex, System.Func`4[T1,T2,T3,TResult] bodyWithStateAndLocal, System.Func`5[T1,T2,T3,T4,TResult] bodyWithEverything, System.Func`1[TResult] localInit, System.Action`1[T] localFinally) [0x00056] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.Parallel.ForEach[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Action`1[T] body) [0x00022] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at SonicRetro.SonLVL.API.LevelData.InitObjectDefinitions () [0x00011] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData.LoadLevel (System.String levelname, System.Boolean loadGraphics) [0x009ad] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.GUI.MainForm.backgroundLevelLoader_DoWork (System.Object sender, System.ComponentModel.DoWorkEventArgs e) [0x00023] in <e586bf449a94471986cc3538caab2ba5>:0 
+---> (Inner Exception #0) System.IO.FileNotFoundException: Could not find file "/home/bunnidev/Documents/SonicRPG/_maps/Obj18ghz.asm"
+File name: '/home/bunnidev/Documents/SonicRPG/_maps/Obj18ghz.asm'
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) [0x001ef] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions)
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, System.Boolean detectEncodingFromByteOrderMarks, System.Int32 bufferSize) [0x00061] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamReader..ctor(string,System.Text.Encoding)
+  at System.IO.File.InternalReadAllLines (System.String path, System.Text.Encoding encoding) [0x00006] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.IO.File.ReadAllLines (System.String path) [0x00032] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at SonicRetro.SonLVL.API.LevelData.GetASMLabels (System.String file, System.Int32 sti, SonicRetro.SonLVL.API.EngineVersion version) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData.ASMToBin (System.String file, System.Int32 sti, SonicRetro.SonLVL.API.EngineVersion version, System.Collections.Generic.Dictionary`2[System.String,System.Int32]& labels) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData.ASMToBin (System.String file, SonicRetro.SonLVL.API.EngineVersion version, System.Collections.Generic.Dictionary`2[System.String,System.Int32]& labels) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData.ASMToBin (System.String file, SonicRetro.SonLVL.API.EngineVersion version) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.ObjectHelper.MapASMToBmp (System.Byte[] artfile, System.String mapfileloc, System.Int32 frame, System.Int32 startpal, System.Boolean priority, SonicRetro.SonLVL.API.EngineVersion version) [0x00010] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.XMLObjectDefinition.Init (SonicRetro.SonLVL.API.ObjectData data) [0x00224] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData+<>c__DisplayClass102_0.<InitObjectDefinitions>b__0 (System.Collections.Generic.KeyValuePair`2[TKey,TValue] group) [0x0036c] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at System.Threading.Tasks.Parallel+<PartitionerForEachWorker>c__AnonStorey6`2[TSource,TLocal].<>m__1 (System.Collections.IEnumerator& partitionState, System.Int32 timeout, System.Boolean& replicationDelegateYieldedBeforeCompletion) [0x0013f] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+--- End of stack trace from previous location where exception was thrown ---
+
+  at System.Threading.Tasks.Parallel+<PartitionerForEachWorker>c__AnonStorey6`2[TSource,TLocal].<>m__1 (System.Collections.IEnumerator& partitionState, System.Int32 timeout, System.Boolean& replicationDelegateYieldedBeforeCompletion) [0x002f6] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.TaskReplicator+Replica`1[TState].ExecuteAction (System.Boolean& yieldedBeforeCompletion) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.TaskReplicator+Replica.Execute () [0x00029] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 <---
+
+Opening INI file "/home/bunnidev/Documents/SonicRPG/SonLVL/SonLVL.ini"...
+Game type is S1.
+Loading Green Hill Zone Act 1...
+Loading 16x16 blocks from file "../map16/ghz.bin", using compression Enigma...
+Loading 256x256 chunks from file "../map256/ghz.bin", using compression Kosinski...
+Loading FG layout from file "../levels/ghz1.bin", using compression Uncompressed...
+Loading BG layout from file "../levels/ghzbg.bin", using compression Uncompressed...
+Loading 8x8 tiles from file "../artnem/8x8ghz1.bin", using compression Nemesis...
+Loading palette file "../pallet/sonic.bin"...
+Source: 0 Destination: 0 Length: 16
+Loading palette file "../pallet/ghz.bin"...
+Source: 0 Destination: 16 Length: 48
+Loading FG layout from file "../levels/ghz2.bin", using compression Uncompressed...
+Loading FG layout from file "../levels/ghz3.bin", using compression Uncompressed...
+Loading 8x8 tiles from file "../artnem/8x8ghz2.bin", using compression Nemesis...
+Loading FG layout from file "../levels/ending.bin", using compression Uncompressed...
+Loading object definition file "obj.ini".
+Loading object definition file "objGHZ.ini".
+Loading ObjectDefinition type S1ObjectDefinitions.Common.Ring from "Common/Ring.cs"...
+Loading type from cached assembly "dllcache/S1ObjectDefinitions.Common.Ring.dll"...
+Loading ObjectDefinition type S1ObjectDefinitions.Common.InvisibleBlock from "Common/InvisibleBlock.cs"...
+Loading ObjectDefinition type S1ObjectDefinitions.GHZ.SwingingPlatform from "GHZ/SwingingPlatform.cs"...
+Loading ObjectDefinition type S1ObjectDefinitions.GHZ.Bridge from "GHZ/Bridge.cs"...
+Loading type from cached assembly "dllcache/S1ObjectDefinitions.GHZ.SwingingPlatform.dll"...
+Loading type from cached assembly "dllcache/S1ObjectDefinitions.Common.InvisibleBlock.dll"...
+Loading type from cached assembly "dllcache/S1ObjectDefinitions.GHZ.Bridge.dll"...
+Loading ObjectDefinition type S1ObjectDefinitions.GHZ.SpikedPole from "GHZ/SpikedPole.cs"...
+Loading type from cached assembly "dllcache/S1ObjectDefinitions.GHZ.SpikedPole.dll"...
+System.AggregateException: One or more errors occurred. (Could not find file "/home/bunnidev/Documents/SonicRPG/_maps/Obj18GHZ.asm") ---> System.IO.FileNotFoundException: Could not find file "/home/bunnidev/Documents/SonicRPG/_maps/Obj18GHZ.asm"
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) [0x001ef] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions)
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, System.Boolean detectEncodingFromByteOrderMarks, System.Int32 bufferSize) [0x00061] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamReader..ctor(string,System.Text.Encoding)
+  at System.IO.File.InternalReadAllLines (System.String path, System.Text.Encoding encoding) [0x00006] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.IO.File.ReadAllLines (System.String path) [0x00032] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at SonicRetro.SonLVL.API.LevelData.GetASMLabels (System.String file, System.Int32 sti, SonicRetro.SonLVL.API.EngineVersion version) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData.ASMToBin (System.String file, System.Int32 sti, SonicRetro.SonLVL.API.EngineVersion version, System.Collections.Generic.Dictionary`2[System.String,System.Int32]& labels) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData.ASMToBin (System.String file, SonicRetro.SonLVL.API.EngineVersion version, System.Collections.Generic.Dictionary`2[System.String,System.Int32]& labels) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData.ASMToBin (System.String file, SonicRetro.SonLVL.API.EngineVersion version) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.ObjectHelper.MapASMToBmp (System.Byte[] artfile, System.String mapfileloc, System.Int32 frame, System.Int32 startpal, System.Boolean priority, SonicRetro.SonLVL.API.EngineVersion version) [0x00010] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.XMLObjectDefinition.Init (SonicRetro.SonLVL.API.ObjectData data) [0x00224] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData+<>c__DisplayClass102_0.<InitObjectDefinitions>b__0 (System.Collections.Generic.KeyValuePair`2[TKey,TValue] group) [0x0036c] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at System.Threading.Tasks.Parallel+<PartitionerForEachWorker>c__AnonStorey6`2[TSource,TLocal].<>m__1 (System.Collections.IEnumerator& partitionState, System.Int32 timeout, System.Boolean& replicationDelegateYieldedBeforeCompletion) [0x0013f] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+--- End of stack trace from previous location where exception was thrown ---
+
+  at System.Threading.Tasks.Parallel+<PartitionerForEachWorker>c__AnonStorey6`2[TSource,TLocal].<>m__1 (System.Collections.IEnumerator& partitionState, System.Int32 timeout, System.Boolean& replicationDelegateYieldedBeforeCompletion) [0x002f6] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.TaskReplicator+Replica`1[TState].ExecuteAction (System.Boolean& yieldedBeforeCompletion) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.TaskReplicator+Replica.Execute () [0x00029] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+   --- End of inner exception stack trace ---
+  at System.Threading.Tasks.TaskReplicator.Run[TState] (System.Threading.Tasks.TaskReplicator+ReplicatableUserAction`1[TState] action, System.Threading.Tasks.ParallelOptions options, System.Boolean stopOnFirstFailure) [0x0006a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.Parallel.PartitionerForEachWorker[TSource,TLocal] (System.Collections.Concurrent.Partitioner`1[TSource] source, System.Threading.Tasks.ParallelOptions parallelOptions, System.Action`1[T] simpleBody, System.Action`2[T1,T2] bodyWithState, System.Action`3[T1,T2,T3] bodyWithStateAndIndex, System.Func`4[T1,T2,T3,TResult] bodyWithStateAndLocal, System.Func`5[T1,T2,T3,T4,TResult] bodyWithEverything, System.Func`1[TResult] localInit, System.Action`1[T] localFinally) [0x001a9] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+--- End of stack trace from previous location where exception was thrown ---
+
+  at System.Threading.Tasks.Parallel.ThrowSingleCancellationExceptionOrOtherException (System.Collections.ICollection exceptions, System.Threading.CancellationToken cancelToken, System.Exception otherException) [0x00010] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.Parallel.PartitionerForEachWorker[TSource,TLocal] (System.Collections.Concurrent.Partitioner`1[TSource] source, System.Threading.Tasks.ParallelOptions parallelOptions, System.Action`1[T] simpleBody, System.Action`2[T1,T2] bodyWithState, System.Action`3[T1,T2,T3] bodyWithStateAndIndex, System.Func`4[T1,T2,T3,TResult] bodyWithStateAndLocal, System.Func`5[T1,T2,T3,T4,TResult] bodyWithEverything, System.Func`1[TResult] localInit, System.Action`1[T] localFinally) [0x00212] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.Parallel.ForEachWorker[TSource,TLocal] (System.Collections.Generic.IEnumerable`1[T] source, System.Threading.Tasks.ParallelOptions parallelOptions, System.Action`1[T] body, System.Action`2[T1,T2] bodyWithState, System.Action`3[T1,T2,T3] bodyWithStateAndIndex, System.Func`4[T1,T2,T3,TResult] bodyWithStateAndLocal, System.Func`5[T1,T2,T3,T4,TResult] bodyWithEverything, System.Func`1[TResult] localInit, System.Action`1[T] localFinally) [0x00056] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.Parallel.ForEach[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Action`1[T] body) [0x00022] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at SonicRetro.SonLVL.API.LevelData.InitObjectDefinitions () [0x00011] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData.LoadLevel (System.String levelname, System.Boolean loadGraphics) [0x009ad] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.GUI.MainForm.backgroundLevelLoader_DoWork (System.Object sender, System.ComponentModel.DoWorkEventArgs e) [0x00023] in <e586bf449a94471986cc3538caab2ba5>:0 
+---> (Inner Exception #0) System.IO.FileNotFoundException: Could not find file "/home/bunnidev/Documents/SonicRPG/_maps/Obj18GHZ.asm"
+File name: '/home/bunnidev/Documents/SonicRPG/_maps/Obj18GHZ.asm'
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) [0x001ef] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions)
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, System.Boolean detectEncodingFromByteOrderMarks, System.Int32 bufferSize) [0x00061] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamReader..ctor(string,System.Text.Encoding)
+  at System.IO.File.InternalReadAllLines (System.String path, System.Text.Encoding encoding) [0x00006] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.IO.File.ReadAllLines (System.String path) [0x00032] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at SonicRetro.SonLVL.API.LevelData.GetASMLabels (System.String file, System.Int32 sti, SonicRetro.SonLVL.API.EngineVersion version) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData.ASMToBin (System.String file, System.Int32 sti, SonicRetro.SonLVL.API.EngineVersion version, System.Collections.Generic.Dictionary`2[System.String,System.Int32]& labels) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData.ASMToBin (System.String file, SonicRetro.SonLVL.API.EngineVersion version, System.Collections.Generic.Dictionary`2[System.String,System.Int32]& labels) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData.ASMToBin (System.String file, SonicRetro.SonLVL.API.EngineVersion version) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.ObjectHelper.MapASMToBmp (System.Byte[] artfile, System.String mapfileloc, System.Int32 frame, System.Int32 startpal, System.Boolean priority, SonicRetro.SonLVL.API.EngineVersion version) [0x00010] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.XMLObjectDefinition.Init (SonicRetro.SonLVL.API.ObjectData data) [0x00224] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData+<>c__DisplayClass102_0.<InitObjectDefinitions>b__0 (System.Collections.Generic.KeyValuePair`2[TKey,TValue] group) [0x0036c] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at System.Threading.Tasks.Parallel+<PartitionerForEachWorker>c__AnonStorey6`2[TSource,TLocal].<>m__1 (System.Collections.IEnumerator& partitionState, System.Int32 timeout, System.Boolean& replicationDelegateYieldedBeforeCompletion) [0x0013f] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+--- End of stack trace from previous location where exception was thrown ---
+
+  at System.Threading.Tasks.Parallel+<PartitionerForEachWorker>c__AnonStorey6`2[TSource,TLocal].<>m__1 (System.Collections.IEnumerator& partitionState, System.Int32 timeout, System.Boolean& replicationDelegateYieldedBeforeCompletion) [0x002f6] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.TaskReplicator+Replica`1[TState].ExecuteAction (System.Boolean& yieldedBeforeCompletion) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.TaskReplicator+Replica.Execute () [0x00029] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 <---
+
+Opening INI file "/home/bunnidev/Documents/SonicRPG/SonLVL/SonLVL.ini"...
+Game type is S1.
+Loading Green Hill Zone Act 1...
+Loading palette file "../pallet/sonic.bin"...
+Source: 0 Destination: 0 Length: 16
+Loading 8x8 tiles from file "../artnem/8x8ghz1.bin", using compression Nemesis...
+Loading 16x16 blocks from file "../map16/ghz.bin", using compression Enigma...
+Loading 256x256 chunks from file "../map256/ghz.bin", using compression Kosinski...
+Loading FG layout from file "../levels/ghz1.bin", using compression Uncompressed...
+Loading palette file "../pallet/ghz.bin"...
+Source: 0 Destination: 16 Length: 48
+Loading BG layout from file "../levels/ghzbg.bin", using compression Uncompressed...
+Loading FG layout from file "../levels/ghz2.bin", using compression Uncompressed...
+Loading FG layout from file "../levels/ghz3.bin", using compression Uncompressed...
+Loading 8x8 tiles from file "../artnem/8x8ghz2.bin", using compression Nemesis...
+Loading FG layout from file "../levels/ending.bin", using compression Uncompressed...
+Loading object definition file "obj.ini".
+Loading object definition file "objGHZ.ini".
+Loading ObjectDefinition type S1ObjectDefinitions.Common.Ring from "Common/Ring.cs"...
+Loading type from cached assembly "dllcache/S1ObjectDefinitions.Common.Ring.dll"...
+Loading ObjectDefinition type S1ObjectDefinitions.Common.InvisibleBlock from "Common/InvisibleBlock.cs"...
+Loading ObjectDefinition type S1ObjectDefinitions.GHZ.Bridge from "GHZ/Bridge.cs"...
+Loading type from cached assembly "dllcache/S1ObjectDefinitions.GHZ.Bridge.dll"...
+Loading type from cached assembly "dllcache/S1ObjectDefinitions.Common.InvisibleBlock.dll"...
+Loading ObjectDefinition type S1ObjectDefinitions.GHZ.SwingingPlatform from "GHZ/SwingingPlatform.cs"...
+Loading ObjectDefinition type S1ObjectDefinitions.GHZ.SpikedPole from "GHZ/SpikedPole.cs"...
+Loading type from cached assembly "dllcache/S1ObjectDefinitions.GHZ.SwingingPlatform.dll"...
+Loading type from cached assembly "dllcache/S1ObjectDefinitions.GHZ.SpikedPole.dll"...
+System.AggregateException: One or more errors occurred. (Could not find file "/home/bunnidev/Documents/SonicRPG/_maps/Obj18GHZ.asm") ---> System.IO.FileNotFoundException: Could not find file "/home/bunnidev/Documents/SonicRPG/_maps/Obj18GHZ.asm"
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) [0x001ef] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions)
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, System.Boolean detectEncodingFromByteOrderMarks, System.Int32 bufferSize) [0x00061] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamReader..ctor(string,System.Text.Encoding)
+  at System.IO.File.InternalReadAllLines (System.String path, System.Text.Encoding encoding) [0x00006] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.IO.File.ReadAllLines (System.String path) [0x00032] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at SonicRetro.SonLVL.API.LevelData.GetASMLabels (System.String file, System.Int32 sti, SonicRetro.SonLVL.API.EngineVersion version) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData.ASMToBin (System.String file, System.Int32 sti, SonicRetro.SonLVL.API.EngineVersion version, System.Collections.Generic.Dictionary`2[System.String,System.Int32]& labels) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData.ASMToBin (System.String file, SonicRetro.SonLVL.API.EngineVersion version, System.Collections.Generic.Dictionary`2[System.String,System.Int32]& labels) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData.ASMToBin (System.String file, SonicRetro.SonLVL.API.EngineVersion version) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.ObjectHelper.MapASMToBmp (System.Byte[] artfile, System.String mapfileloc, System.Int32 frame, System.Int32 startpal, System.Boolean priority, SonicRetro.SonLVL.API.EngineVersion version) [0x00010] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.XMLObjectDefinition.Init (SonicRetro.SonLVL.API.ObjectData data) [0x00224] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData+<>c__DisplayClass102_0.<InitObjectDefinitions>b__0 (System.Collections.Generic.KeyValuePair`2[TKey,TValue] group) [0x0036c] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at System.Threading.Tasks.Parallel+<PartitionerForEachWorker>c__AnonStorey6`2[TSource,TLocal].<>m__1 (System.Collections.IEnumerator& partitionState, System.Int32 timeout, System.Boolean& replicationDelegateYieldedBeforeCompletion) [0x0013f] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+--- End of stack trace from previous location where exception was thrown ---
+
+  at System.Threading.Tasks.Parallel+<PartitionerForEachWorker>c__AnonStorey6`2[TSource,TLocal].<>m__1 (System.Collections.IEnumerator& partitionState, System.Int32 timeout, System.Boolean& replicationDelegateYieldedBeforeCompletion) [0x002f6] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.TaskReplicator+Replica`1[TState].ExecuteAction (System.Boolean& yieldedBeforeCompletion) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.TaskReplicator+Replica.Execute () [0x00029] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+   --- End of inner exception stack trace ---
+  at System.Threading.Tasks.TaskReplicator.Run[TState] (System.Threading.Tasks.TaskReplicator+ReplicatableUserAction`1[TState] action, System.Threading.Tasks.ParallelOptions options, System.Boolean stopOnFirstFailure) [0x0006a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.Parallel.PartitionerForEachWorker[TSource,TLocal] (System.Collections.Concurrent.Partitioner`1[TSource] source, System.Threading.Tasks.ParallelOptions parallelOptions, System.Action`1[T] simpleBody, System.Action`2[T1,T2] bodyWithState, System.Action`3[T1,T2,T3] bodyWithStateAndIndex, System.Func`4[T1,T2,T3,TResult] bodyWithStateAndLocal, System.Func`5[T1,T2,T3,T4,TResult] bodyWithEverything, System.Func`1[TResult] localInit, System.Action`1[T] localFinally) [0x001a9] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+--- End of stack trace from previous location where exception was thrown ---
+
+  at System.Threading.Tasks.Parallel.ThrowSingleCancellationExceptionOrOtherException (System.Collections.ICollection exceptions, System.Threading.CancellationToken cancelToken, System.Exception otherException) [0x00010] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.Parallel.PartitionerForEachWorker[TSource,TLocal] (System.Collections.Concurrent.Partitioner`1[TSource] source, System.Threading.Tasks.ParallelOptions parallelOptions, System.Action`1[T] simpleBody, System.Action`2[T1,T2] bodyWithState, System.Action`3[T1,T2,T3] bodyWithStateAndIndex, System.Func`4[T1,T2,T3,TResult] bodyWithStateAndLocal, System.Func`5[T1,T2,T3,T4,TResult] bodyWithEverything, System.Func`1[TResult] localInit, System.Action`1[T] localFinally) [0x00212] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.Parallel.ForEachWorker[TSource,TLocal] (System.Collections.Generic.IEnumerable`1[T] source, System.Threading.Tasks.ParallelOptions parallelOptions, System.Action`1[T] body, System.Action`2[T1,T2] bodyWithState, System.Action`3[T1,T2,T3] bodyWithStateAndIndex, System.Func`4[T1,T2,T3,TResult] bodyWithStateAndLocal, System.Func`5[T1,T2,T3,T4,TResult] bodyWithEverything, System.Func`1[TResult] localInit, System.Action`1[T] localFinally) [0x00056] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.Parallel.ForEach[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Action`1[T] body) [0x00022] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at SonicRetro.SonLVL.API.LevelData.InitObjectDefinitions () [0x00011] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData.LoadLevel (System.String levelname, System.Boolean loadGraphics) [0x009ad] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.GUI.MainForm.backgroundLevelLoader_DoWork (System.Object sender, System.ComponentModel.DoWorkEventArgs e) [0x00023] in <e586bf449a94471986cc3538caab2ba5>:0 
+---> (Inner Exception #0) System.IO.FileNotFoundException: Could not find file "/home/bunnidev/Documents/SonicRPG/_maps/Obj18GHZ.asm"
+File name: '/home/bunnidev/Documents/SonicRPG/_maps/Obj18GHZ.asm'
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) [0x001ef] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions)
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, System.Boolean detectEncodingFromByteOrderMarks, System.Int32 bufferSize) [0x00061] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamReader..ctor(string,System.Text.Encoding)
+  at System.IO.File.InternalReadAllLines (System.String path, System.Text.Encoding encoding) [0x00006] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.IO.File.ReadAllLines (System.String path) [0x00032] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at SonicRetro.SonLVL.API.LevelData.GetASMLabels (System.String file, System.Int32 sti, SonicRetro.SonLVL.API.EngineVersion version) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData.ASMToBin (System.String file, System.Int32 sti, SonicRetro.SonLVL.API.EngineVersion version, System.Collections.Generic.Dictionary`2[System.String,System.Int32]& labels) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData.ASMToBin (System.String file, SonicRetro.SonLVL.API.EngineVersion version, System.Collections.Generic.Dictionary`2[System.String,System.Int32]& labels) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData.ASMToBin (System.String file, SonicRetro.SonLVL.API.EngineVersion version) [0x00000] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.ObjectHelper.MapASMToBmp (System.Byte[] artfile, System.String mapfileloc, System.Int32 frame, System.Int32 startpal, System.Boolean priority, SonicRetro.SonLVL.API.EngineVersion version) [0x00010] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.XMLObjectDefinition.Init (SonicRetro.SonLVL.API.ObjectData data) [0x00224] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at SonicRetro.SonLVL.API.LevelData+<>c__DisplayClass102_0.<InitObjectDefinitions>b__0 (System.Collections.Generic.KeyValuePair`2[TKey,TValue] group) [0x0036c] in <91f46f7be8214232afc935fdea2c3e5d>:0 
+  at System.Threading.Tasks.Parallel+<PartitionerForEachWorker>c__AnonStorey6`2[TSource,TLocal].<>m__1 (System.Collections.IEnumerator& partitionState, System.Int32 timeout, System.Boolean& replicationDelegateYieldedBeforeCompletion) [0x0013f] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+--- End of stack trace from previous location where exception was thrown ---
+
+  at System.Threading.Tasks.Parallel+<PartitionerForEachWorker>c__AnonStorey6`2[TSource,TLocal].<>m__1 (System.Collections.IEnumerator& partitionState, System.Int32 timeout, System.Boolean& replicationDelegateYieldedBeforeCompletion) [0x002f6] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.TaskReplicator+Replica`1[TState].ExecuteAction (System.Boolean& yieldedBeforeCompletion) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 
+  at System.Threading.Tasks.TaskReplicator+Replica.Execute () [0x00029] in <12b418a7818c4ca0893feeaaf67f1e7f>:0 <---
+
