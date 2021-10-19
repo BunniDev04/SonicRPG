@@ -247,7 +247,7 @@ GameModeArray:
 ; ===========================================================================
 		bra.w	Level		; Normal Level ($0C)
 ; ===========================================================================
-		bra.w	SpecialStage	; Special Stage	($10)
+		bra.w	Battle	; Special Stage	($10)
 ; ===========================================================================
 		bra.w	ContinueScreen	; Continue Screen ($14)
 ; ===========================================================================
@@ -2225,7 +2225,7 @@ loc_1ECC:				; XREF: Pal_DecColor
 ; ||||||||||||||| S U B	R O U T	I N E |||||||||||||||||||||||||||||||||||||||
 
 
-Pal_MakeWhite:				; XREF: SpecialStage
+Pal_MakeWhite:				; XREF: Battle
 		move.w	#$3F,($FFFFF626).w
 		moveq	#0,d0
 		lea	($FFFFFB00).w,a0
@@ -2328,7 +2328,7 @@ loc_1F78:				; XREF: Pal_DecColor2
 ; ||||||||||||||| S U B	R O U T	I N E |||||||||||||||||||||||||||||||||||||||
 
 
-Pal_MakeFlash:				; XREF: SpecialStage
+Pal_MakeFlash:				; XREF: Battle
 		move.w	#$3F,($FFFFF626).w
 		move.w	#$15,d4
 
@@ -4594,10 +4594,10 @@ Demo_SS:	incbin	demodata\i_ss.bin
 ; ===========================================================================
 
 ; ---------------------------------------------------------------------------
-; Special Stage
+; Battle Screen Mode
 ; ---------------------------------------------------------------------------
 
-SpecialStage:				; XREF: GameModeArray
+Battle:				; XREF: GameModeArray
 		sfx	sfx_EnterSS	; play special stage entry sound
 		command	mus_Reset	; fade reset music
 
@@ -4808,7 +4808,7 @@ SS_ToSegaScreen:
 ; ||||||||||||||| S U B	R O U T	I N E |||||||||||||||||||||||||||||||||||||||
 
 
-SS_BGLoad:				; XREF: SpecialStage
+SS_BGLoad:				; XREF: Battle
 		lea	($FF0000).l,a1
 		lea	(Eni_SSBg1).l,a0 ; load	mappings for the birds and fish
 		move.w	#$4051,d0
@@ -4882,7 +4882,7 @@ loc_491C:
 ; ||||||||||||||| S U B	R O U T	I N E |||||||||||||||||||||||||||||||||||||||
 
 
-PalCycle_SS:				; XREF: loc_DA6; SpecialStage
+PalCycle_SS:				; XREF: loc_DA6; Battle
 		tst.w	($FFFFF63A).w
 		bne.s	locret_49E6
 		subq.w	#1,($FFFFF79C).w
@@ -4991,7 +4991,7 @@ Pal_SSCyc2:	incbin	pallet\c_ss_2.bin
 ; ||||||||||||||| S U B	R O U T	I N E |||||||||||||||||||||||||||||||||||||||
 
 
-SS_BGAnimate:				; XREF: SpecialStage
+SS_BGAnimate:				; XREF: Battle
 		move.w	($FFFFF7A0).w,d0
 		bne.s	loc_4BF6
 		move.w	#0,($FFFFF70C).w
@@ -32854,7 +32854,7 @@ Touch_D7orE1:				; XREF: Touch_Special
 ; ||||||||||||||| S U B	R O U T	I N E |||||||||||||||||||||||||||||||||||||||
 
 
-SS_ShowLayout:				; XREF: SpecialStage
+SS_ShowLayout:				; XREF: Battle
 		bsr.w	SS_AniWallsRings
 		bsr.w	SS_AniItems
 		move.w	d5,-(sp)
@@ -33310,7 +33310,7 @@ SS_StartLoc:	incbin	misc\sloc_ss.bin
 ; ||||||||||||||| S U B	R O U T	I N E |||||||||||||||||||||||||||||||||||||||
 
 
-SS_Load:				; XREF: SpecialStage
+SS_Load:				; XREF: Battle
 		moveq	#0,d0
 		move.b	($FFFFFE16).w,d0 ; load	number of last special stage entered
 		addq.b	#1,($FFFFFE16).w
